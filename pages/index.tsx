@@ -1,5 +1,7 @@
+import { Button } from '@chakra-ui/react';
+
 const Home = () => {
-  return <div />;
+  return <Button>HelloWorld</Button>;
 };
 
 export default Home;
