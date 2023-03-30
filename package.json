@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "next": "13.2.4",
@@ -24,6 +26,14 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^2.8.7",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "husky": "^8.0.0",
+    "commitizen": "4.2.4",
+    "cz-customizable": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   }
 }
