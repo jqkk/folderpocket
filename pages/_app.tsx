@@ -1,3 +1,5 @@
+import '@/styles/global.scss';
+
 import { ChakraProvider } from '@chakra-ui/react';
 import { Provider } from 'jotai';
 import { DevTools } from 'jotai-devtools';
