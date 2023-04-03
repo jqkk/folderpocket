@@ -6,6 +6,7 @@ specifiers:
   '@chakra-ui/system': ^2.5.5
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
+  '@primer/octicons-react': ^18.3.0
   '@types/node': 18.15.11
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
@@ -36,6 +37,7 @@ dependencies:
   '@chakra-ui/system': 2.5.5_xqp3pgpqjlfxxa3zxu4zoc4fba
   '@emotion/react': 11.10.6_o2wclmlv6kymw75psj4clbbe6a
   '@emotion/styled': 11.10.6_y3jktkphxddpitstssvkgnnxe4
+  '@primer/octicons-react': 18.3.0_react@18.2.0
   framer-motion: 10.10.0_biqbaboplfbrettd7655fr4n2y
   jotai: 2.0.3_react@18.2.0
   next: 13.2.4_5y7qh6ykubtj2qr2evk3di7hpa
@@ -1773,6 +1775,15 @@ packages:
 
   /@popperjs/core/2.11.7:
     resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
+    dev: false
+
+  /@primer/octicons-react/18.3.0_react@18.2.0:
+    resolution: {integrity: sha512-kOoc4wrBw3bPe2ZPj9BmCwXdEkw8hxUX/tFCvcjOsZ6eywaQXm3PR0yZnPZxZ8o4RFj2tdg/cwGr4+cU83weHw==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@radix-ui/number/1.0.0:

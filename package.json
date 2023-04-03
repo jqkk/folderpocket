@@ -16,6 +16,7 @@
     "@chakra-ui/system": "^2.5.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@primer/octicons-react": "^18.3.0",
     "framer-motion": "^10.10.0",
     "jotai": "^2.0.3",
     "next": "13.2.4",
