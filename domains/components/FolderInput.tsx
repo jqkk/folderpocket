@@ -8,9 +8,14 @@ const FolderInput = () => {
   const [source, setSource] = useAtom(sourceAtom);
 
   return (
-    <Box backgroundColor='gray.100' minHeight={60} p={2}>
+    <Box
+      backgroundColor='gray.100'
+      minHeight={60}
+      display='flex'
+      flexDirection='column'
+      p={2}>
       <Editor
-        style={{ height: '100%' }}
+        style={{ height: '100%', flex: 1 }}
         value={source}
         onValueChange={setSource}
         highlight={(code: string) => <>{code}</>}
