@@ -37,6 +37,7 @@
     "jotai-devtools": "^0.4.0",
     "prettier": "^2.8.7",
     "redux": "^4.2.1",
+    "sass": "^1.60.0",
     "typescript": "5.0.2"
   },
   "config": {
