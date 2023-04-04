@@ -7,6 +7,7 @@ specifiers:
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
   '@primer/octicons-react': ^18.3.0
+  '@types/lodash.flattendeep': ^4.4.7
   '@types/node': 18.15.11
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
@@ -22,6 +23,7 @@ specifiers:
   husky: ^8.0.0
   jotai: ^2.0.3
   jotai-devtools: ^0.4.0
+  lodash.flattendeep: ^4.4.0
   next: 13.2.4
   prettier: ^2.8.7
   react: 18.2.0
@@ -38,8 +40,10 @@ dependencies:
   '@emotion/react': 11.10.6_o2wclmlv6kymw75psj4clbbe6a
   '@emotion/styled': 11.10.6_y3jktkphxddpitstssvkgnnxe4
   '@primer/octicons-react': 18.3.0_react@18.2.0
+  '@types/lodash.flattendeep': 4.4.7
   framer-motion: 10.10.0_biqbaboplfbrettd7655fr4n2y
   jotai: 2.0.3_react@18.2.0
+  lodash.flattendeep: 4.4.0
   next: 13.2.4_5y7qh6ykubtj2qr2evk3di7hpa
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1960,6 +1964,12 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
+
+  /@types/lodash.flattendeep/4.4.7:
+    resolution: {integrity: sha512-1h6GW/AeZw/Wej6uxrqgmdTDZX1yFS39lRsXYkg+3kWvOWWrlGCI6H7lXxlUHOzxDT4QeYGmgPpQ3BX9XevzOg==}
+    dependencies:
+      '@types/lodash': 4.14.192
+    dev: false
 
   /@types/lodash.mergewith/4.6.7:
     resolution: {integrity: sha512-3m+lkO5CLRRYU0fhGRp7zbsGi6+BZj0uTVSwvcKU+nSlhjA9/QRNfuSGnD2mX6hQA7ZbmcCkzk5h4ZYGOtk14A==}
@@ -3902,6 +3912,10 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash.flattendeep/4.4.0:
+    resolution: {integrity: sha512-uHaJFihxmJcEX3kT4I23ABqKKalJ/zDrDg0lsFtc1h+3uw49SIJ5beyhx5ExVRti3AvKoOJngIj7xz3oylPdWQ==}
+    dev: false
 
   /lodash.isplainobject/4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}

@@ -1,5 +1,5 @@
 import type { FileStructure } from '../types/FileStructure';
-import { last } from './last';
+import { last } from '../utils';
 
 /**
  * Matches the whitespace in front of a file name.
