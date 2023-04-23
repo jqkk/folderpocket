@@ -43,7 +43,7 @@ export const parseInput = (input: string): FileStructure => {
 };
 
 export const splitInput = (input: string): FileStructure[] => {
-  let lines = input.match(newlineSplitterRegex) || [];
+  let lines: string[] = input.match(newlineSplitterRegex) || [];
 
   lines = lines.filter((l) => !onlyWhitespaceRegex.test(l));
 
