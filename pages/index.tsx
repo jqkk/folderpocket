@@ -1,6 +1,7 @@
 import { TriangleDownIcon } from '@chakra-ui/icons';
-import { Box, Button } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
+import CopyButton from '@/domains/components/CopyButton';
 import FolderInput from '@/domains/components/FolderInput';
 import SearchGithub from '@/domains/components/SearchGithub';
 import TreeOutput from '@/domains/components/TreeOutput';
@@ -16,9 +17,7 @@ const Home = () => {
         <TriangleDownIcon boxSize={6} color='yellow.400' />
       </Box>
       <TreeOutput />
-      <Button width='100%' mt={5} colorScheme='yellow'>
-        Copy
-      </Button>
+      <CopyButton />
     </Box>
   );
 };
