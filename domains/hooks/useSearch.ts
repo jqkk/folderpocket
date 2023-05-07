@@ -7,7 +7,7 @@ import { CustomError } from '@/utils/errors';
 
 import {
   checkEmptyInput,
-  checkValideInputForGithubSearch,
+  checkValidateInputForGithubSearch,
 } from '../utils/input-validate';
 import useGithubSearch from './useGithubSearch';
 
@@ -32,7 +32,7 @@ const useSearch = () => {
       checkEmptyInput(input);
 
       const [userName, repoName, branch] = input.split('/');
-      checkValideInputForGithubSearch(userName, repoName, branch);
+      checkValidateInputForGithubSearch(userName, repoName, branch);
 
       setLoading(true);
       await searchGithub(userName, repoName, branch);

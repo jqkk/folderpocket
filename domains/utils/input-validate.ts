@@ -6,7 +6,7 @@ export const checkEmptyInput = (input: string) => {
   }
 };
 
-export const checkValideInputForGithubSearch = (
+export const checkValidateInputForGithubSearch = (
   userName: string,
   repoName: string,
   branch: string,
