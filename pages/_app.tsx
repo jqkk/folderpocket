@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
       <ChakraProvider>
-        <DevTools />
+        {process.env.NODE_ENV === 'development' && <DevTools />}
         <Component {...pageProps} />
         <Loading />
       </ChakraProvider>
