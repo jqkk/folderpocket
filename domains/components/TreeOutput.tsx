@@ -14,7 +14,8 @@ const TreeOutput = () => {
       flex={1}
       p={2}
       whiteSpace='pre'
-      fontFamily='mono'>
+      fontFamily='mono'
+      overflowX='auto'>
       {tree}
     </Box>
   );

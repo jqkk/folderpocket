@@ -1,19 +1,10 @@
 import type { FileStructure } from '../types/FileStructure';
 import { last } from '../utils';
 
-/**
- * Matches the whitespace in front of a file name.
- * Also will match a markdown bullet point if included.
- * For example, testing against "  - hello" will return
- * a positive match with the first capturing group
- * with "  - " and a second with "  "
- */
 const leadingWhitespaceAndBulletRegex = /^((\s*)(?:-\s)?)/;
 
-/** Matches lines that only contain whitespace */
 const onlyWhitespaceRegex = /^\s*$/;
 
-/** Used to split a block of text into individual lines */
 const newlineSplitterRegex = /[^\r\n]+/g;
 
 export const parseInput = (input: string): FileStructure => {
