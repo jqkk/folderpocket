@@ -10,6 +10,7 @@ const FolderInput = () => {
   return (
     <Box
       backgroundColor='gray.100'
+      flex={1}
       minHeight={60}
       display='flex'
       flexDirection='column'
