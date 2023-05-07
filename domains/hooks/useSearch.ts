@@ -21,7 +21,7 @@ const useSearch = () => {
     setInput(e.target.value);
   };
 
-  const handleKeyDown = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSubmit();
     }
@@ -35,7 +35,7 @@ const useSearch = () => {
       checkValideInputForGithubSearch(userName, repoName, branch);
 
       setLoading(true);
-      searchGithub(userName, repoName, branch);
+      await searchGithub(userName, repoName, branch);
       setLoading(false);
     } catch (e) {
       handleError(e);
