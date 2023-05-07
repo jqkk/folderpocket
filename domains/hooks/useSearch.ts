@@ -3,7 +3,7 @@ import { useSetAtom } from 'jotai';
 import { useState } from 'react';
 
 import { loadingAtom } from '@/atoms/loading';
-import { ErrorAlertError } from '@/utils/errors';
+import { CustomError } from '@/utils/errors';
 
 import {
   checkEmptyInput,
@@ -44,7 +44,7 @@ const useSearch = () => {
 
   const handleError = (e: unknown) => {
     setLoading(false);
-    if (e instanceof ErrorAlertError) {
+    if (e instanceof CustomError) {
       const { title, status } = e.getOptions();
       toast({
         title,
