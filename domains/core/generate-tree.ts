@@ -3,14 +3,14 @@ import flattenDeep from 'lodash.flattendeep';
 import type { FileStructure } from '../types/FileStructure';
 import type { StylingOptions } from '../types/StylingOptions';
 import { last } from '../utils';
-import { getLineStrings } from './line-strings';
+import { LINE_STRINGS } from './line-strings';
 
 export const generateTree = (
   structure: FileStructure,
   options: StylingOptions,
 ): string =>
   flattenDeep([
-    getAsciiLine(structure, options),
+    getAsciiLine(structure, options) ?? [],
     structure.children.map((c) => generateTree(c, options)),
   ])
     .filter((line) => line != null)
@@ -18,14 +18,16 @@ export const generateTree = (
 
 const getAsciiLine = (structure: FileStructure, options: StylingOptions) => {
   if (!structure.parent) {
-    return structure.name;
+    return options.rootOption ? structure.name : null;
   }
-
-  const LINE_STRINGS = getLineStrings(options.iconOption);
 
   const chunks = [
     isLastChild(structure) ? LINE_STRINGS.LAST_CHILD : LINE_STRINGS.CHILD,
-    structure.name,
+    options.iconOption
+      ? structure.children.length > 0
+        ? '📦 ' + structure.name
+        : '📃 ' + structure.name
+      : structure.name,
   ];
 
   let current = structure.parent;
