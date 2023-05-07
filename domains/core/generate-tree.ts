@@ -1,23 +1,27 @@
 import flattenDeep from 'lodash.flattendeep';
 
 import type { FileStructure } from '../types/FileStructure';
+import type { StylingOptions } from '../types/StylingOptions';
 import { last } from '../utils';
-import { LINE_STRINGS } from './line-strings';
+import { getLineStrings } from './line-strings';
 
-export const generateTree = (structure: FileStructure): string =>
+export const generateTree = (
+  structure: FileStructure,
+  options: StylingOptions,
+): string =>
   flattenDeep([
-    getAsciiLine(structure),
-    structure.children.map((c) => generateTree(c)),
+    getAsciiLine(structure, options),
+    structure.children.map((c) => generateTree(c, options)),
   ])
-    // Remove null entries. Should only occur for the very first node
-    // when `options.rootDot === false`
     .filter((line) => line != null)
     .join('\n');
 
-const getAsciiLine = (structure: FileStructure) => {
+const getAsciiLine = (structure: FileStructure, options: StylingOptions) => {
   if (!structure.parent) {
     return structure.name;
   }
+
+  const LINE_STRINGS = getLineStrings(options.iconOption);
 
   const chunks = [
     isLastChild(structure) ? LINE_STRINGS.LAST_CHILD : LINE_STRINGS.CHILD,
@@ -32,15 +36,10 @@ const getAsciiLine = (structure: FileStructure) => {
     current = current.parent;
   }
 
-  // Join all the chunks together to create the final line.
-  // If we're not rendering the root `.`, chop off the first 4 characters.
-  return chunks.join('').substring(0);
+  return chunks
+    .join('')
+    .substring(options.rootOption ? 0 : LINE_STRINGS.CHILD.length);
 };
 
-/**
- * A utility function do determine if a file or folder
- * is the last child of its parent
- * @param structure The file or folder to test
- */
 const isLastChild = (structure: FileStructure): boolean =>
   Boolean(structure.parent && last(structure.parent.children) === structure);
